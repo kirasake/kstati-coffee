@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кстати — кофе с видом на Дон · Ростов-на-Дону</title>
+  <meta name="description" content="Кофейня «Кстати» на набережной Дона: Береговая ул., 12, Ростов-на-Дону. Ежедневно 09:00–00:00. Концепт-сайт для портфолио.">
+  <meta name="theme-color" content="#F4ECE1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Кстати — кофе с видом на Дон">
+  <meta property="og:description" content="Кофейня на набережной Дона в Ростове-на-Дону. Концепт-сайт для портфолио.">
+  <meta property="og:image" content="assets/img/og-cover.jpg">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        if (sessionStorage.getItem("kstati-visited")) d.classList.add("preloader-skip");
+        sessionStorage.setItem("kstati-visited", "1");
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Marck+Script&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%235B3A29'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-style='italic' text-anchor='middle' fill='%23F4ECE1'%3EК%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- 1. Прелоадер -->
+  <div class="preloader" data-preloader aria-hidden="true">
+    <div class="preloader__inner">
+      <svg class="preloader__cup" viewBox="0 0 120 160" width="120" height="160">
+        <defs>
+          <clipPath id="cup-clip">
+            <path d="M24 44 L96 44 L88 150 Q87 156 81 156 L39 156 Q33 156 32 150 Z"/>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#cup-clip)">
+          <rect x="0" y="0" width="120" height="160" fill="#E8D9C5"/>
+          <g class="preloader__fill" data-preloader-fill>
+            <path class="preloader__wave" d="M-120 60 Q-105 52 -90 60 T-60 60 T-30 60 T0 60 T30 60 T60 60 T90 60 T120 60 T150 60 T180 60 T210 60 T240 60 L240 200 L-120 200 Z" fill="#5B3A29"/>
+          </g>
+        </g>
+        <path d="M24 44 L96 44 L88 150 Q87 156 81 156 L39 156 Q33 156 32 150 Z" fill="none" stroke="#2B1B14" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M18 34 Q18 28 24 28 L96 28 Q102 28 102 34 L102 44 L18 44 Z" fill="#F4ECE1" stroke="#2B1B14" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M34 28 L38 18 L82 18 L86 28" fill="none" stroke="#2B1B14" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M30 92 L90 92" stroke="#C8894B" stroke-width="10" opacity=".85"/>
+      </svg>
+      <p class="preloader__word">Кстати</p>
+      <p class="preloader__script">кстати, о кофе…</p>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <!-- 2. Топбар и шапка -->
+  <div class="topbar">
+    <div class="container topbar__row">
+      <span>Кофе на набережной Дона</span>
+      <span>Ежедневно 09:00–00:00</span>
+    </div>
+  </div>
+
+  <header class="header" id="header" data-header>
+    <div class="container header__row">
+      <a class="logo" href="#top" aria-label="Кстати — в начало">
+        <span class="logo__word">Кстати</span>
+        <span class="logo__sub">кофе · набережная</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#day">День на набережной</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--dark btn--sm header__call" href="tel:+79953779121" data-magnetic>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        <span>Позвонить</span>
+      </a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню" data-burger>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+    <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+      <a href="#menu" class="mobile-menu__link"><span>01</span>Меню</a>
+      <a href="#about" class="mobile-menu__link"><span>02</span>О нас</a>
+      <a href="#day" class="mobile-menu__link"><span>03</span>День на набережной</a>
+      <a href="#reviews" class="mobile-menu__link"><span>04</span>Отзывы</a>
+      <a href="#contacts" class="mobile-menu__link"><span>05</span>Контакты</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p class="status" data-open-status><span class="status__dot" aria-hidden="true"></span><span class="status__text">Ежедневно 09:00–00:00</span></p>
+      <p>Береговая ул., 12, Ростов-на-Дону</p>
+      <a class="btn btn--dark" href="tel:+79953779121">Позвонить · +7 (995) 377-91-21</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- 3. Первый экран -->
+    <section class="hero" id="top" data-hero aria-labelledby="hero-title">
+      <div class="hero__items" aria-hidden="true">
+        <div class="hero__item hero__item--cappuccino" data-hero-item data-depth="0.6">
+          <div class="hero__float">
+            <img src="assets/img/hero-cappuccino.png" alt="" width="1024" height="1024" fetchpriority="high" decoding="async">
+            <svg class="steam" data-steam viewBox="0 0 120 160" fill="none">
+              <path d="M40 150 C 28 125, 52 110, 40 85 S 52 45, 40 20" />
+              <path d="M60 150 C 48 122, 72 108, 60 80 S 72 40, 60 10" />
+              <path d="M80 150 C 68 126, 92 112, 80 88 S 92 50, 80 24" />
+            </svg>
+          </div>
+        </div>
+        <div class="hero__item hero__item--iced" data-hero-item data-depth="0.9">
+          <div class="hero__float"><img src="assets/img/hero-iced-latte.png" alt="" width="1024" height="1024" decoding="async"></div>
+        </div>
+        <div class="hero__item hero__item--lemonade" data-hero-item data-depth="0.75">
+          <div class="hero__float"><img src="assets/img/hero-lemonade.png" alt="" width="1024" height="1024" decoding="async"></div>
+        </div>
+        <div class="hero__item hero__item--beans" data-hero-item data-depth="0.3">
+          <div class="hero__float"><img src="assets/img/hero-beans.png" alt="" width="1024" height="1024" decoding="async"></div>
+        </div>
+        <div class="hero__item hero__item--lime" data-hero-item data-depth="0.45">
+          <div class="hero__float"><img src="assets/img/hero-lime-mint.png" alt="" width="1024" height="1024" decoding="async"></div>
+        </div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="script hero__script">кстати, о кофе…</p>
+        <h1 class="hero__title" id="hero-title" data-reveal="words">Кофе с видом на&nbsp;Дон</h1>
+        <p class="hero__lead" data-reveal="fade">Кофейня прямо на набережной Ростова-на-Дону. Капучино, айс-латте и&nbsp;лимонады в&nbsp;больших стаканах&nbsp;— с&nbsp;собой на&nbsp;прогулку или под зонтиком летней площадки.</p>
+        <div class="hero__actions" data-reveal="fade">
+          <a class="btn btn--dark" href="#menu" data-magnetic><span>Смотреть меню</span></a>
+          <a class="btn btn--ghost" href="#contacts" data-magnetic><span>Как добраться</span></a>
+        </div>
+        <a class="rating-badge" href="#reviews" data-reveal="fade">
+          <span class="rating-badge__num" data-count="4.9" data-decimals="1">4,9</span>
+          <span class="rating-badge__star" aria-hidden="true">★</span>
+          <span class="rating-badge__text">· 128 оценок на Яндекс.Картах</span>
+        </a>
+      </div>
+      <a class="hero__scroll" href="#about" aria-label="Прокрутить к разделу «О нас»"><span></span></a>
+    </section>
+
+    <!-- 4. Бегущая строка -->
+    <section class="marquee" id="marquee" data-marquee aria-label="Напитки «Кстати»">
+      <div class="marquee__track" data-marquee-track>
+        <div class="marquee__group">
+          <span>Эспрессо</span><i aria-hidden="true">·</i><span>Капучино</span><i aria-hidden="true">·</i><span>Айс латте</span><i aria-hidden="true">·</i><span>Раф</span><i aria-hidden="true">·</i><span>Лимонад киви–лайм</span><i aria-hidden="true">·</i><span>Матча</span><i aria-hidden="true">·</i><span>Эспрессо тоник</span><i aria-hidden="true">·</i><span>Флэт уайт</span><i aria-hidden="true">·</i><span>Бамбл</span><i aria-hidden="true">·</i><span>Какао</span><i aria-hidden="true">·</i>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Эспрессо</span><i>·</i><span>Капучино</span><i>·</i><span>Айс латте</span><i>·</i><span>Раф</span><i>·</i><span>Лимонад киви–лайм</span><i>·</i><span>Матча</span><i>·</i><span>Эспрессо тоник</span><i>·</i><span>Флэт уайт</span><i>·</i><span>Бамбл</span><i>·</i><span>Какао</span><i>·</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Почему «Кстати» -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head">
+          <svg class="section-head__mark" viewBox="0 0 32 24" aria-hidden="true"><path d="M9 3c4 0 7 4 7 9s-3 9-7 9-7-4-7-9 3-9 7-9zm0 2c-1.5 3-1 6 0 7.5S10.5 17 9 19M23 3c4 0 7 4 7 9s-3 9-7 9-7-4-7-9 3-9 7-9zm0 2c-1.5 3-1 6 0 7.5S24.5 17 23 19"/></svg>
+          <h2 class="section-title" id="about-title" data-reveal="words">Почему «Кстати»</h2>
+          <p class="section-sub" data-reveal="fade">Небольшая кофейня у воды&nbsp;— по пути на прогулку и обратно.</p>
+        </header>
+
+        <div class="about__grid">
+          <article class="feature">
+            <div class="media feature__media" data-reveal="mask">
+              <img src="assets/img/about-embankment.jpg" alt="Летняя площадка кофейни с зонтиками на набережной Дона" width="800" height="1000" loading="lazy" decoding="async">
+            </div>
+            <h3 class="feature__title">Прямо на набережной</h3>
+            <p class="feature__text" data-reveal="lines">Береговая, у самой воды: вид на Дон и летняя площадка с зонтиками, которые спасают от палящего солнца.</p>
+          </article>
+          <article class="feature">
+            <div class="media feature__media" data-reveal="mask">
+              <img src="assets/img/about-sizes.jpg" alt="Большие стаканы айс-кофе и лимонадов в ряд" width="800" height="1000" loading="lazy" decoding="async">
+            </div>
+            <h3 class="feature__title">Большие объёмы — честные цены</h3>
+            <p class="feature__text" data-reveal="lines">Айс-напитки и лимонады&nbsp;— по 450&nbsp;мл, капучино&nbsp;— от 215&nbsp;₽. Удобно взять с&nbsp;собой и&nbsp;гулять долго.</p>
+          </article>
+          <article class="feature">
+            <div class="media feature__media" data-reveal="mask">
+              <img src="assets/img/about-dog.jpg" alt="Собака у столика рядом со стаканом кофе с собой" width="800" height="1000" loading="lazy" decoding="async">
+            </div>
+            <h3 class="feature__title">Можно с собакой и с собой</h3>
+            <p class="feature__text" data-reveal="lines">Кофе с собой, оплата картой, рады гостям со всеми животными&nbsp;— заходите прямо с&nbsp;прогулки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5б. Хиты -->
+    <section class="section highlights" id="highlights" data-highlights aria-labelledby="highlights-title">
+      <div class="container">
+        <header class="section-head">
+          <svg class="section-head__mark" viewBox="0 0 32 24" aria-hidden="true"><path d="M9 3c4 0 7 4 7 9s-3 9-7 9-7-4-7-9 3-9 7-9zm0 2c-1.5 3-1 6 0 7.5S10.5 17 9 19M23 3c4 0 7 4 7 9s-3 9-7 9-7-4-7-9 3-9 7-9zm0 2c-1.5 3-1 6 0 7.5S24.5 17 23 19"/></svg>
+          <h2 class="section-title" id="highlights-title" data-reveal="words">Хиты</h2>
+          <p class="section-sub" data-reveal="fade">Четыре напитка, с которых стоит начать знакомство.</p>
+        </header>
+        <div class="highlights__grid" data-reveal="stagger">
+          <article class="hit">
+            <div class="media hit__media"><img src="assets/img/menu-cappuccino.jpg" alt="Капучино" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <h3 class="hit__name">Капучино</h3>
+            <p class="hit__meta">250&nbsp;мл · <b>215&nbsp;₽</b></p>
+          </article>
+          <article class="hit">
+            <div class="media hit__media"><img src="assets/img/menu-iced-latte.jpg" alt="Айс латте" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <h3 class="hit__name">Айс латте</h3>
+            <p class="hit__meta">450&nbsp;мл · <b>299&nbsp;₽</b></p>
+          </article>
+          <article class="hit">
+            <div class="media hit__media"><img src="assets/img/menu-lemonade-kiwi-lime.jpg" alt="Лимонад киви–лайм" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <h3 class="hit__name">Лимонад киви–лайм</h3>
+            <p class="hit__meta">450&nbsp;мл · <b>335&nbsp;₽</b></p>
+          </article>
+          <article class="hit">
+            <div class="media hit__media"><img src="assets/img/menu-raf.jpg" alt="Раф" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <h3 class="hit__name">Раф</h3>
+            <p class="hit__meta">250&nbsp;мл · <b>275&nbsp;₽</b></p>
+          </article>
+        </div>
+        <div class="center">
+          <a class="btn btn--dark" href="#menu" data-magnetic><span>Всё меню</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Меню -->
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="script section-head__script">всё, что варим</p>
+          <h2 class="section-title" id="menu-title" data-reveal="words">Меню</h2>
+          <p class="section-sub" data-reveal="fade">Классика, айс-кофе и лимонады — все 19 позиций.</p>
+        </header>
+
+        <div class="menu__tabs" role="tablist" aria-label="Разделы меню" data-menu-tabs>
+          <span class="menu__tabs-pill" aria-hidden="true"></span>
+          <button class="menu__tab" type="button" role="tab" id="tab-classic" aria-controls="panel-classic" aria-selected="true" data-menu-tab="classic">Классика <sup>10</sup></button>
+          <button class="menu__tab" type="button" role="tab" id="tab-iced" aria-controls="panel-iced" aria-selected="false" tabindex="-1" data-menu-tab="iced">Айс кофе <sup>5</sup></button>
+          <button class="menu__tab" type="button" role="tab" id="tab-lemonades" aria-controls="panel-lemonades" aria-selected="false" tabindex="-1" data-menu-tab="lemonades">Лимонады <sup>4</sup></button>
+        </div>
+
+        <div class="menu__panel menu__panel--classic" role="tabpanel" id="panel-classic" aria-labelledby="tab-classic" tabindex="0" data-menu-panel="classic">
+          <h3 class="menu__group-title">Классика</h3>
+          <div class="menu__grid">
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-espresso.jpg" alt="Эспрессо" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Эспрессо</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">36&nbsp;мл</span><span class="menu-card__price">179&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-americano.jpg" alt="Американо" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Американо</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">250&nbsp;мл</span><span class="menu-card__price">195&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-cappuccino.jpg" alt="Капучино" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Капучино</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">250&nbsp;мл</span><span class="menu-card__price">215&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-latte.jpg" alt="Латте" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Латте</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">250&nbsp;мл</span><span class="menu-card__price">229&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-raf.jpg" alt="Раф" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Раф</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">250&nbsp;мл</span><span class="menu-card__price">275&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-flat-white.jpg" alt="Флэт уайт" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Флэт уайт</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">250&nbsp;мл</span><span class="menu-card__price">235&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-glace.jpg" alt="Гляссе" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Гляссе</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">250&nbsp;мл</span><span class="menu-card__price">275&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-mocha.jpg" alt="Мокко" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Мокко</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">350&nbsp;мл</span><span class="menu-card__price">329&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-matcha.jpg" alt="Матча" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Матча</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">350&nbsp;мл</span><span class="menu-card__price">259&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-cocoa.jpg" alt="Какао" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Какао</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">250&nbsp;мл</span><span class="menu-card__price">215&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="menu__panel menu__panel--iced" role="tabpanel" id="panel-iced" aria-labelledby="tab-iced" tabindex="0" data-menu-panel="iced">
+          <h3 class="menu__group-title">Айс кофе</h3>
+          <div class="menu__grid">
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-iced-latte.jpg" alt="Айс латте" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Айс латте</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">299&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-iced-matcha.jpg" alt="Айс матча" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Айс матча</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">289&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-bumble.jpg" alt="Бамбл апельсиновый/вишнёвый/гранатовый" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Бамбл апельсиновый/<wbr>вишнёвый/<wbr>гранатовый</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">345&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-espresso-tonic.jpg" alt="Эспрессо тоник" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Эспрессо тоник</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">299&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-iced-raf.jpg" alt="Айс раф" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Айс раф</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">335&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="menu__panel menu__panel--lemonades" role="tabpanel" id="panel-lemonades" aria-labelledby="tab-lemonades" tabindex="0" data-menu-panel="lemonades">
+          <h3 class="menu__group-title">Лимонады</h3>
+          <div class="menu__grid">
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-lemonade-kiwi-lime.jpg" alt="Лимонад киви–лайм" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Лимонад киви–лайм</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">335&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-lemonade-mango-passion.jpg" alt="Лимонад манго–маракуйя" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Лимонад манго–маракуйя</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">335&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-lemonade-raspberry-lemon.jpg" alt="Лимонад малина–лимон" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Лимонад малина–лимон</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">335&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+            <article class="menu-card" data-menu-card>
+              <div class="menu-card__inner">
+                <div class="media menu-card__media"><img src="assets/img/menu-lemonade-cherry-bubblegum.jpg" alt="Лимонад вишня–бабл-гам" width="800" height="1000" loading="lazy" decoding="async"></div>
+                <div class="menu-card__body">
+                  <h4 class="menu-card__name">Лимонад вишня–бабл-гам</h4>
+                  <p class="menu-card__meta"><span class="menu-card__volume">450&nbsp;мл</span><span class="menu-card__price">335&nbsp;₽</span></p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="menu__note">Цены с Яндекс.Карт на 24.11.2026, могут отличаться.</p>
+      </div>
+    </section>
+
+    <!-- 7. День на набережной -->
+    <section class="day" id="day" data-day aria-labelledby="day-title">
+      <div class="day__inner">
+        <div class="container day__head">
+          <div>
+            <p class="script day__script">один день у Дона</p>
+            <h2 class="section-title day__title" id="day-title" data-reveal="words">День на набережной</h2>
+          </div>
+          <div class="day__clock" data-day-clock aria-hidden="true">
+            <svg class="day__dial" viewBox="0 0 64 64">
+              <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2"/>
+              <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <path d="M32 6v5M32 53v5M6 32h5M53 32h5"/>
+              </g>
+              <line class="day__hand day__hand--h" transform="rotate(270 32 32)" x1="32" y1="32" x2="32" y2="17" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <line class="day__hand day__hand--m" x1="32" y1="32" x2="32" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="32" cy="32" r="2.5" fill="currentColor"/>
+            </svg>
+            <span class="day__clock-value"><span class="day__clock-digits">09:00</span></span>
+          </div>
+        </div>
+
+        <div class="day__track" data-day-track>
+          <article class="day-panel" data-day-panel data-bg="#F4ECE1" data-time="09:00">
+            <div class="media day-panel__media"><img src="assets/img/day-morning.jpg" alt="Эспрессо в утреннем свете у реки" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="day-panel__body">
+              <p class="day-panel__time">09:00</p>
+              <h3 class="day-panel__title">Утро, эспрессо</h3>
+              <p class="day-panel__text">Открываемся в девять. Набережная только просыпается&nbsp;— самое время для короткого эспрессо у воды.</p>
+              <p class="day-panel__drink"><span>Эспрессо · 36&nbsp;мл</span><b>179&nbsp;₽</b></p>
+            </div>
+          </article>
+          <article class="day-panel" data-day-panel data-bg="#F1D7A6" data-time="13:00">
+            <div class="media day-panel__media"><img src="assets/img/day-noon.jpg" alt="Айс-латте на парапете набережной под ярким солнцем" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="day-panel__body">
+              <p class="day-panel__time">13:00</p>
+              <h3 class="day-panel__title">Полдень, айс-латте</h3>
+              <p class="day-panel__text">Солнце в зените, под зонтиками летней площадки&nbsp;— тень. Большой айс-латте можно взять с&nbsp;собой на прогулку.</p>
+              <p class="day-panel__drink"><span>Айс латте · 450&nbsp;мл</span><b>299&nbsp;₽</b></p>
+            </div>
+          </article>
+          <article class="day-panel" data-day-panel data-bg="#D98E57" data-time="18:00">
+            <div class="media day-panel__media"><img src="assets/img/day-evening.jpg" alt="Лимонад на закате у реки" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="day-panel__body">
+              <p class="day-panel__time">18:00</p>
+              <h3 class="day-panel__title">Вечер, лимонад</h3>
+              <p class="day-panel__text">Тёплый вечер и закат над рекой. Лимонад киви–лайм со льдом&nbsp;— освежиться после жаркого дня.</p>
+              <p class="day-panel__drink"><span>Лимонад киви–лайм · 450&nbsp;мл</span><b>335&nbsp;₽</b></p>
+            </div>
+          </article>
+          <article class="day-panel" data-day-panel data-bg="#22160F" data-time="23:30">
+            <div class="media day-panel__media"><img src="assets/img/day-night.jpg" alt="Какао на фоне ночных огней набережной и моста" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="day-panel__body">
+              <p class="day-panel__time">23:30</p>
+              <h3 class="day-panel__title">Ночь, какао</h3>
+              <p class="day-panel__text">Огни набережной и моста отражаются в Дону. Работаем до полуночи&nbsp;— успеете на тёплое какао.</p>
+              <p class="day-panel__drink"><span>Какао · 250&nbsp;мл</span><b>215&nbsp;₽</b></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Отзывы -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="container reviews__grid">
+        <div class="reviews__score">
+          <p class="script">гости говорят</p>
+          <h2 class="visually-hidden" id="reviews-title">Отзывы</h2>
+          <p class="reviews__num"><span data-count="4.9" data-decimals="1">4,9</span></p>
+          <p class="reviews__stars" aria-label="Рейтинг 4,9 из 5">★★★★★</p>
+          <p class="reviews__count">128 оценок · 108 отзывов<br>на Яндекс.Картах</p>
+          <a class="link-arrow" href="https://yandex.ru/maps/org/kstati/193387289977/" target="_blank" rel="noopener">Открыть на Яндекс.Картах <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="reviews__carousel" data-reviews aria-roledescription="карусель" aria-label="Отзывы гостей">
+          <div class="reviews__viewport">
+            <div class="reviews__track">
+              <figure class="review" data-review aria-roledescription="слайд" aria-label="1 из 3">
+                <blockquote class="review__quote"><p>«Вкусный кофе, приятная музыка, удобные стульчики… от палящего солнца спасают зонтики»</p></blockquote>
+                <figcaption class="review__by"><span class="review__name">Анютка♡</span><span class="review__date">29 мая · Яндекс.Карты</span></figcaption>
+              </figure>
+              <figure class="review" data-review aria-roledescription="слайд" aria-label="2 из 3">
+                <blockquote class="review__quote"><p>«самые лучшие напитки на Набережной по соотношению цена/вкус»</p></blockquote>
+                <figcaption class="review__by"><span class="review__name">Анна Петухова</span><span class="review__date">4 августа · Яндекс.Карты</span></figcaption>
+              </figure>
+              <figure class="review" data-review aria-roledescription="слайд" aria-label="3 из 3">
+                <blockquote class="review__quote"><p>«Отличное место, чтобы взять стаканчик айс-латте и пойти гулять по Набережной»</p></blockquote>
+                <figcaption class="review__by"><span class="review__name">Ева Чистова</span><span class="review__date">28 мая · Яндекс.Карты</span></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="reviews__controls">
+            <button class="round-btn" type="button" data-reviews-prev aria-label="Предыдущий отзыв">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+            </button>
+            <div class="reviews__dots" data-reviews-dots></div>
+            <button class="round-btn" type="button" data-reviews-next aria-label="Следующий отзыв">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Контакты -->
+    <section class="section contacts" id="contacts" aria-labelledby="contacts-title">
+      <div class="container">
+        <div class="contacts__grid">
+          <div class="contacts__info">
+            <p class="script">заходи в гости</p>
+            <h2 class="section-title section-title--left" id="contacts-title" data-reveal="words">Как нас найти</h2>
+            <span class="divider" aria-hidden="true"></span>
+            <p class="status" data-open-status><span class="status__dot" aria-hidden="true"></span><span class="status__text">Ежедневно 09:00–00:00</span></p>
+            <dl class="contacts__list">
+              <div><dt>Адрес</dt><dd>Береговая ул., 12, Ростов-на-Дону<br><small>набережная Дона</small></dd></div>
+              <div><dt>Часы</dt><dd>Ежедневно 09:00–00:00</dd></div>
+              <div><dt>Телефон</dt><dd><a href="tel:+79953779121">+7 (995) 377-91-21</a></dd></div>
+            </dl>
+            <ul class="chips" aria-label="Особенности">
+              <li>Кофе с собой</li>
+              <li>Оплата картой</li>
+              <li>Можно с животными</li>
+              <li>Летняя площадка</li>
+            </ul>
+            <div class="contacts__actions">
+              <a class="btn btn--dark" href="https://yandex.ru/maps/org/kstati/193387289977/" target="_blank" rel="noopener" data-magnetic><span>Построить маршрут</span></a>
+              <a class="btn btn--ghost" href="tel:+79953779121" data-magnetic><span>Позвонить</span></a>
+            </div>
+          </div>
+          <div class="contacts__photos">
+            <div class="media contacts__photo" data-reveal="mask"><img src="assets/img/visit-terrace.jpg" alt="Терраса кофейни у реки" width="1600" height="900" loading="lazy" decoding="async"></div>
+            <div class="media contacts__photo" data-reveal="mask"><img src="assets/img/visit-barista.jpg" alt="Бариста наливает латте-арт" width="800" height="1000" loading="lazy" decoding="async"></div>
+            <div class="media contacts__photo" data-reveal="mask"><img src="assets/img/day-noon.jpg" alt="Стакан айс-латте на парапете у реки" width="800" height="1000" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+        <div class="map" data-reveal="fade">
+          <iframe src="https://yandex.ru/map-widget/v1/?oid=193387289977" loading="lazy" title="Кофейня «Кстати» на Яндекс.Картах" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9б. Баннер -->
+    <section class="banner" id="visit" data-banner aria-labelledby="banner-title">
+      <div class="banner__media media">
+        <img src="assets/img/banner-cups.jpg" alt="Стаканы кофе и лимонадов на каменном парапете набережной, на фоне река и мост" width="2100" height="900" loading="lazy" decoding="async" data-parallax>
+      </div>
+      <div class="container banner__content">
+        <h2 class="banner__title" id="banner-title" data-reveal="words">Заходи, кстати</h2>
+        <p class="banner__text" data-reveal="fade">Береговая ул., 12 · ежедневно 09:00–00:00</p>
+        <a class="btn btn--light" href="https://yandex.ru/maps/org/kstati/193387289977/" target="_blank" rel="noopener" data-magnetic><span>Построить маршрут</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 10. Футер -->
+  <footer class="footer" id="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo logo--light" href="#top"><span class="logo__word">Кстати</span><span class="logo__sub">кофе · набережная</span></a>
+        <p class="script footer__script">кстати, о кофе…</p>
+      </div>
+      <div>
+        <h3 class="footer__h">Адрес</h3>
+        <p>Береговая ул., 12, Ростов-на-Дону</p>
+        <p>Ежедневно 09:00–00:00</p>
+        <p><a href="tel:+79953779121">+7 (995) 377-91-21</a></p>
+      </div>
+      <nav aria-label="Навигация в подвале">
+        <h3 class="footer__h">Разделы</h3>
+        <ul class="footer__nav">
+          <li><a href="#menu">Меню</a></li>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#day">День на набережной</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span data-year>2026</span> · Концепт-сайт для портфолио. Не является официальным сайтом кофейни. Данные — Яндекс.Карты, 24.11.2026</p>
+      <a href="#top" class="footer__up">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="js/menu-data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/motion.js" defer></script>
+</body>
+</html>
