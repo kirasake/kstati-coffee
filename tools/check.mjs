@@ -263,7 +263,7 @@ const FACTS = [
   ["Часы 09:00", () => text.includes("09:00")],
   ["Часы 00:00", () => text.includes("00:00")],
   ["Адрес «Береговая ул., 12, Ростов-на-Дону»", () => text.includes("Береговая ул., 12, Ростов-на-Дону")],
-  ["Карта Яндекса (виджет организации, lazy)", () => /<iframe[^>]*src="https:\/\/yandex\.ru\/map-widget\/v1\/\?oid=193387289977"[^>]*loading="lazy"|<iframe[^>]*loading="lazy"[^>]*src="https:\/\/yandex\.ru\/map-widget\/v1\/\?oid=193387289977"/.test(html)],
+  ["Карта Яндекса (центр и метка на кофейне, lazy)", () => { const m = html.match(/<iframe[^>]*>/g)?.find(t => t.includes("yandex.ru/map-widget/v1/?")); return !!m && m.includes("ll=39.717250%2C47.214195") && m.includes("pt=39.717250%2C47.214195") && m.includes('loading="lazy"'); }],
   ["«Построить маршрут» на карточку организации", () => html.includes('href="https://yandex.ru/maps/org/kstati/193387289977/"') && text.includes("Построить маршрут")],
   ["Рейтинг 4,9 и 128 оценок", () => text.includes("4,9") && text.includes("128 оценок")],
   ["Заголовок «Кофе с видом на Дон»", () => text.includes("Кофе с видом на Дон")],
