@@ -34,7 +34,14 @@
     console.warn("[motion] отключено:", err);
     ScrollTrigger.getAll().forEach(function (t) { t.kill(); });
     gsap.globalTimeline.clear();
-    gsap.set($$("[data-reveal], [data-reveal] *, [data-hero] *, [data-menu-card], [data-day-track]"), { clearProps: "all" });
+    gsap.set($$("[data-reveal], [data-reveal] *, [data-hero] *, [data-menu-card], [data-day-track], " +
+      "[data-day-panel], [data-day-panel] *"), { clearProps: "all" });
+    // Отзывы: трек листает main.js инлайн-transform'ом — его не трогаем.
+    gsap.set($$("[data-reviews], .review__quote, .review__by"), { clearProps: "transform,opacity,visibility" });
+    $$("[data-count]").forEach(function (el) {
+      var n = parseFloat(el.getAttribute("data-count")) || 0;
+      el.textContent = n.toFixed(+el.getAttribute("data-decimals") || 0).replace(".", ",");
+    });
     var day = $("[data-day]");
     if (day) day.classList.remove("is-pinned");
     if (lenis) lenis.destroy();
@@ -330,9 +337,19 @@
     doc.addEventListener("menu:change", function (e) {
       if (typeof K.showMenuPanel !== "function") return;
       e.preventDefault();
-      if (current) current.progress(1);
+      // Новый клик посреди каскада: старый таймлайн убиваем, а не доматываем —
+      // иначе его колбэк вызвал бы showMenuPanel(старая вкладка) и вернул бы
+      // aria-selected и «таблетку» назад.
+      if (current) {
+        current.kill();
+        current = null;
+        gsap.set($$("[data-menu-card]"), { clearProps: "transform,opacity,visibility" });
+      }
       var d = e.detail;
-      var oldCards = d.fromPanel ? $$("[data-menu-card]", d.fromPanel) : [];
+      // Уходим с той панели, что реально видна сейчас (после прерванного каскада
+      // это может быть не d.fromPanel).
+      var visiblePanel = $("[data-menu-panel]:not([hidden])") || d.fromPanel;
+      var oldCards = visiblePanel && visiblePanel !== d.toPanel ? $$("[data-menu-card]", visiblePanel) : [];
       var newCards = d.toPanel ? $$("[data-menu-card]", d.toPanel) : [];
       current = gsap.timeline({ onComplete: function () { current = null; } });
       current.to(oldCards, { y: -28, autoAlpha: 0, duration: 0.38, ease: "power2.in", stagger: 0.025 })
